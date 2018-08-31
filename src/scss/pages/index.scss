@@ -1,13 +1,11 @@
 body {
   background: linear-gradient(180deg, #fcde38, #ffbc08) no-repeat;
   background-size: cover;
-  //height: 100vh;
   background-color: #ffbc08;
+  overflow-x: hidden;
 }
 
 .main-page {
-  //background: linear-gradient(180deg, #fcde38, #ffbc08) no-repeat;
-  //width: 100%;
   height: 100vh;
 }
 
@@ -74,7 +72,7 @@ body {
   }
 
   &__letter {
-    @include font(21px, 1);
+    @include font(25px, 1, 400, normal, $fontLeague);
     @include flex(center, center);
 
     width: 50px;
