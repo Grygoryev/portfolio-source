@@ -8,80 +8,121 @@ article.popup.popup-menu.menu#popup-menu.js-hidden
       .menu__close-btn.close-btn
         span
         span
+
     section.projects
-      a(href="shulte.html").projects__item
-        //- img(src="img/icons/schulteTable.png").projects__item-icon
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-            i.tech-icons__item.js-icon
-        .available-mark
-        .projects__item-title Таблица Шульте
-      a(href="https://grygoryev.github.io/goodOne/build/index.html").projects__item
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-        .available-mark
-        .projects__item-title
-          p Адаптивный лендинг
-      a(href="https://grygoryev.github.io/binary-perts/build/index.html").projects__item
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-        .available-mark
-        .projects__item-title 
-          p Наброски лендинга для планшетов
-      a(href="https://grygoryev.github.io/travel_landing/build/index.html").projects__item
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-            i.tech-icons__item.js-icon
-        .available-mark
-        .projects__item-title 
-          p Адаптивный Туристический Лендинг
-      a(href="waxom-landing.html").projects__item
-        .available-mark
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-        .projects__item-title Simple Landing page (not adaptive)
-      a(href="https://grygoryev.github.io/funboxQT/dist").projects__item
-        .projects__item-title Карточки с котиками
-        .available-mark
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.css-icon
-            i.tech-icons__item.js-icon
-      a(href="https://grygoryev.github.io/bids-and-asks/build").projects__item
-        .projects__item-title Bids and Asks Table(json upload)
-        .available-mark
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.js-icon
-      a(href="https://grygoryev.github.io/todoapp/build/").projects__item
-        .projects__item-title Simple TODO App on React
-        .available-mark
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.js-icon
-            i.tech-icons__item.react-icon
-      a(href="https://grygoryev.github.io/reactmenu/build/").projects__item
-        .projects__item-title Simple Menu on React
-        .available-mark
-        .tech-icons
-            i.tech-icons__item.html-icon
-            i.tech-icons__item.js-icon
-            i.tech-icons__item.react-icon
 
-    .sources
-      a(href="https://github.com/Grygoryev/travel_landing/tree/master").sources__link  Адаптивный Туристический Ленндинг, исходник - https://github.com/Grygoryev/travel_landing/tree/master
-      a(href="https://github.com/Grygoryev/reactmenu").sources__link Menu app on react, исходник - https://github.com/Grygoryev/reactmenu
-      a(href="https://github.com/Grygoryev/todoapp").sources__link ToDo app on react, исходник - https://github.com/Grygoryev/todoapp
-      a(href="https://github.com/Grygoryev/goodOne").sources__link Адаптивный лендинг, исходник - https://github.com/Grygoryev/goodOne
-      a(href="https://github.com/Grygoryev/binary-perts").sources__link Наброски лендинга для планшетов, исходник - https://github.com/Grygoryev/binary-perts
-      a(href="https://github.com/Grygoryev/funboxQT").sources__link Карточки с котиками, исходник - https://github.com/Grygoryev/funboxQT
-      a(href="https://github.com/Grygoryev/bids-and-asks").sources__link Bids and Asks table, исходник - https://github.com/Grygoryev/bids-and-asks
+      .project.project_shulte-table.project
+        a(href="shulte.html").project__main
+          .project__title Shulte Table
+          .tech-icons
+            i.tech-icons__item.html-icon
+            i.tech-icons__item.css-icon
+            i.tech-icons__item.js-icon
+            i.tech-icons__item.sass-icon
+            i.tech-icons__item.pug-icon       
+            i.tech-icons__item.gulp-icon
 
+      .project.project_travel-landing
+        a(href="https://grygoryev.github.io/travel_landing/build/index.html").project__main
+          .project__title Adaptive landing #1
+          .tech-icons
+            i.tech-icons__item.html-icon
+            i.tech-icons__item.css-icon
+            i.tech-icons__item.js-icon
+            i.tech-icons__item.sass-icon
+            i.tech-icons__item.pug-icon       
+            i.tech-icons__item.gulp-icon
+        a(href="https://github.com/Grygoryev/travel_landing/tree/master").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
 
-    h2.projects__developing-alert Портфолио находится в стадии разработки.
-      p Имеющиеся материалы требуют доработки и рефакторинга
+      .project
+        a(href="https://grygoryev.github.io/goodOne/build/index.html").project__main
+          .project__title
+            p Adaptive Landing #2
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.css-icon
+              i.tech-icons__item.sass-icon
+              i.tech-icons__item.pug-icon 
+              i.tech-icons__item.gulp-icon 
+        a(href="https://github.com/Grygoryev/goodOne").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+      .project
+        a(href="https://grygoryev.github.io/binary-perts/build/index.html").project__main
+          .project__title
+            p Adaptive landing #3
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.css-icon
+              i.tech-icons__item.sass-icon
+              i.tech-icons__item.pug-icon     
+              i.tech-icons__item.gulp-icon
+        a(href="https://github.com/Grygoryev/binary-perts").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+      a(href="waxom-landing.html").project
+        .tech-icons
+            i.tech-icons__item.html-icon
+            i.tech-icons__item.css-icon
+            i.tech-icons__item.sass-icon
+            i.tech-icons__item.pug-icon       
+            i.tech-icons__item.gulp-icon
+        .project__title Simple Landing page (not adaptive)
+
+      .project
+        a(href="https://grygoryev.github.io/funboxQT/dist").project__main
+          .project__title Cats Cards
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.css-icon
+              i.tech-icons__item.js-icon
+              i.tech-icons__item.sass-icon
+              i.tech-icons__item.pug-icon       
+              i.tech-icons__item.gulp-icon
+        a(href="https://github.com/Grygoryev/funboxQT").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+      .project
+        a(href="https://grygoryev.github.io/bids-and-asks/build").project__main
+          .project__title Bids and Asks Table(json upload)
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.js-icon
+              i.tech-icons__item.pug-icon       
+              i.tech-icons__item.gulp-icon
+        a(href="https://github.com/Grygoryev/bids-and-asks").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+      .project
+        a(href="https://grygoryev.github.io/todoapp/build/").project__main
+          .project__title ToDo App (React)   
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.js-icon
+              i.tech-icons__item.react-icon            
+              i.tech-icons__item.webpack-icon
+        a(href="https://github.com/Grygoryev/todoapp").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+      .project
+        a(href="https://grygoryev.github.io/reactmenu/build/").project__main
+          .project__title Simple Menu (React) 
+          .tech-icons
+              i.tech-icons__item.html-icon
+              i.tech-icons__item.js-icon
+              i.tech-icons__item.react-icon
+              i.tech-icons__item.webpack-icon
+        a(href="https://github.com/Grygoryev/reactmenu").project-source
+          .project-source__title Source code
+          .project-source__github-icon.github-icon
+
+    
+    //- h2.projects__developing-alert Портфолио находится в стадии разработки.
+    //-   p Имеющиеся материалы требуют доработки и рефакторинга
