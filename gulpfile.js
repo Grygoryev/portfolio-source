@@ -12,7 +12,7 @@ gulp.task('pug', function () {
   return gulp.src('src/pug/*.pug')
       .pipe(pug())
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist'))
+      .pipe(gulp.dest('build'))
 });
 
 gulp.task('sass', function () {
@@ -20,30 +20,30 @@ gulp.task('sass', function () {
       .pipe(sass())
       .pipe(autoprefixer())
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist/css'))
+      .pipe(gulp.dest('build/css'))
 });
 
 gulp.task('js', function () {
   return gulp.src('src/js/**/*.js')
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist/js/'))
+      .pipe(gulp.dest('build/js/'))
 });
 
 gulp.task('img', function () {
   return gulp.src('src/img/**/*.*', {since: gulp.lastRun('img')})
       .pipe(debug({title: 'working on'}))
-      .pipe(gulp.dest('dist/img'))
+      .pipe(gulp.dest('build/img'))
 });
 
 gulp.task('assets', function () {
   return gulp.src('src/assets/**/**.*')
-      .pipe(gulp.dest('dist/assets'))
+      .pipe(gulp.dest('build/assets'))
 });
 
 gulp.task('browser-sync', function () {
   browserSync.init({
     server: {
-      baseDir: 'dist'
+      baseDir: 'build'
     },
     notify: true
   })
@@ -54,11 +54,11 @@ gulp.task('watch', function () {
   gulp.watch('src/pug/**/*.*', gulp.series('pug'));
   gulp.watch('src/js/**/*.*', gulp.series('js'));
 
-  gulp.watch('dist/**/*.*').on('change', browserSync.reload);
+  gulp.watch('build/**/*.*').on('change', browserSync.reload);
 });
 
 gulp.task('clean', function () {
-  return del('dist');
+  return del('build');
 });
 
 gulp.task('build', gulp.series('clean', gulp.parallel('pug', 'sass', 'js', 'img', 'assets')));

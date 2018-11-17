@@ -3,9 +3,17 @@ var circle = $('.circle'),
     closeMenubtn = $('.menu__close-btn');
 
 circle.on('click', function () {
-  popupMenu.toggleClass('js-hidden');
+  popupMenu.removeClass('js-hidden');
+  popupMenu.removeClass('hideShrink');
+  popupMenu.addClass('showUp');
 });
 
 closeMenubtn.on('click', function () {
-  popupMenu.toggleClass('js-hidden');
+  setTimeout(function() {
+    popupMenu.addClass('hideShrink');
+  }, 0)
+
+  setTimeout(function () {
+    popupMenu.removeClass('showUp');
+  }, 600);
 });
