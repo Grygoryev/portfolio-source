@@ -54,9 +54,10 @@
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-  grid-auto-rows: 200px;
+  grid-auto-rows: auto;
   grid-gap: 20px;
-
+  grid-auto-flow: dense;
+  
   @include respond-to-min($lg) {
     justify-content: space-between;
   }
@@ -64,27 +65,16 @@
 
 .project {
   width: 100%;
-  // flex: 2 1 250px;
-  // grid-column: 1 / 12;
+  height: 100%;
   grid-column: auto / span 2;
-  // padding: 5px;
-  // margin: 5px;
   text-align: center;
   background: linear-gradient(180deg, rgba($white, 0.65), rgba(lightblue, 0.75)),
               linear-gradient(0deg, rgba($white, 0.65), rgba(lightblue, 0.75));
-  // border: 5px solid #00b7ff;
-  // box-shadow: 0px 2px 24px rgba(0, 0, 0, 0.15);
-  // border-radius: 4px;
   position: relative;
-
-  // @include respond-to-min($lg) {
-  //     width: calc(49% - 10px);
-
-  //     margin-bottom: 20px;
-  // }
 
   &__main {
     min-height: 200px;
+    height: 100%;
     position: relative;
     width: 100%;
     overflow: hidden;
@@ -100,6 +90,7 @@
         position: absolute;
         width: 100%;
         height: 200px;
+        height: 100%; 
         top: 0;
         left: 0;
         background-color: rgba(orange, 0.8);
@@ -115,6 +106,8 @@
   &__title {
     max-width: 100%;
     width: 100%;
+    margin-top: auto;
+    // margin-bottom: auto;
     font-family: $fontMuseoSans;
   }
 
@@ -128,6 +121,21 @@
       margin-right: 20px;
   }
 }
+
+
+.horisontal {
+  grid-column: auto / span 4;
+}
+
+.vertical {
+  grid-row: auto / span 2;
+}
+
+.big {
+  grid-column: auto / span 4;
+  grid-row: auto / span 2;
+}
+
 
 .project_travel-landing {
 
@@ -170,28 +178,25 @@
 }
 
 .tech-icons {
-  max-width: 70%;
+  max-width: 200px;
   width: 100%;
   min-height: 50px;
-  position: absolute;
-  left: 15px;
-  bottom: 5px;
+  margin-bottom: 5px;
+  margin-top: 30px;
+  margin-right: auto;
+  margin-left: 20px;
 
   @include flex(flex-start, center, row nowrap);
 
-  @include respond-to-min($lg) {
-      max-width: 60%;
-  }
-
   &__item {
-      max-width: 55px;
+      max-width: 100%;
       width: 100%;
       min-height: 55px;
       height: auto;
       background-repeat: no-repeat;
       background-position: 50% 59%;
       height: auto;
-      background-size: 80%;
+      background-size: 75%;
       background-repeat: no-repeat;
   }
 }
